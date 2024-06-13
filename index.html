@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>Учет расходов</h1>
+
+    <div class="wrapper">
+        <div class="wrapper-input">
+            <input 
+                class="js-expense-input expense-input" 
+                type="number"
+                min="1">
+            
+            <select class="js-categorySelect categorySelect">
+                <option hidden disabled selected value="Категория">
+                    Категория
+                </option>
+                <option value="Продукты">
+                    Продукты
+                </option>
+                <option value="Кафе">
+                    Кафе и рестораны
+                </option>
+                <option value="Квартира">
+                    Квартира
+                </option>
+                <option value="Авто">
+                    Авто
+                </option>
+            </select>
+        </div>
+
+        <button class="js-expense-btn expense-btn">
+            Добавить
+        </button>
+     </div>    
+        <div class="wrapper-values">
+            <div class="wrapper-values__col">
+                <div class="wrapper-limit">
+                    <p>Лимит: <span class="js-limit limit rub">10000</span></p>
+                    <img 
+                        class="js-limitBtn limitBtn"
+                        src="./img/Mask group.png" 
+                        alt="смена лимита">
+                </div>    
+                <p>Сумма: <span class="js-sum sum rub">0</span></p>
+                <p>Статус: <span class="js-status status">всё хорошо</span></p>
+            </div>
+
+            <div class="wrapper-values__col">
+                <h2>История</h2>
+                <ol class="js-history history"></ol>
+            </div>
+        </div>
+        <button class="js-clearButton clearButton">
+            Сбросить расходы
+        </button>
+   
+    <script src="./index.js"></script>
+</body>
+</html>
